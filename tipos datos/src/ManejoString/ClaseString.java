@@ -164,8 +164,59 @@ public class ClaseString {
         // y siempre el primer argumento es inclusive
         System.out.println("subString con un argumento: " + nombreCompleto.substring(15));
         System.out.println("subString con dos argumentos: " + nombreCompleto.substring(0, 14));
+        /* Método replace(). Sirve para reemplazar un carácter por otro, recibe 2 parámetros, uno
+        * es el carácter a cambiar que es conocido como 'target' y el otro parámetro es por el cual
+        * será reemplazado y es conocido como replacement */
+        String cadena = "Hijo";
+        System.out.println("Antes del cambio: " + cadena);
+        System.out.println("Después del cambio: " + cadena.replace("o", "@"));
+        /* Método indexOf(). Permite saber si se encuentra algún carácter dentro del String y retorna el índice
+        * de la primer incidencia, puede recibir como parámetro un String o un char */
+        System.out.println("Número del indice de la letra solicitada: " + nombreCompleto.indexOf('a'));
+        /* Método lastIndexOf(). Permite saber si se encuentra algún carácter dentro del String y retorna el índice
+         * de la última incidencia, puede recibir como parámetro un String o un char, si no encuentra coincidencia,
+         * retorna un número negativo */
+        System.out.println("Número del indice de la letra solicitada: " + nombreCompleto.lastIndexOf('s'));
+        /* Método contains(). Recibe una cadena y retorna true o false, dependiendo el caso */
+        System.out.println("Contiene? " + nombreCompleto.contains("Adolfo"));
+        /* Método startsWith(). Recibe una secuencia de carácteres, se usa para saber con cual carácter o cadena
+         empieza la cadena y retorna true o false dependiendo el caso */
+        System.out.println("inicia? " + nombreCompleto.contains("G"));
+        /* Método endsWith(). Recibe una secuencia de carácteres, se usa para saber con cual carácter o cadena
+         finaliza la cadena y retorna true o false dependiendo el caso */
+        System.out.println("Finaliza? " + nombreCompleto.contains("."));
+        /* Método trim(). Elimina los espacios en blanco al principio y al final que pueda tener el String */
+        String ejemplo = "   Ejemplo   ";
+        System.out.println(ejemplo);
+        System.out.println(ejemplo.trim());
 
-        // Carpeta 03 - video 008
+        // EJERCICIO - obtener extensión archivo
+        String imagen = "imagen.jpeg";
+        System.out.println("Cantidad carácteres: " + imagen.length());
+        System.out.println("Extensión: " + imagen.substring(7));
+        int extension = imagen.lastIndexOf(".");
+        System.out.println("Extensión: " + imagen.substring(extension+1));
+
+        // EJEMPLO STRING ---> ARREGLO
+        System.out.println("Array: " + nombreCompleto.toCharArray());
+        char[] arreglo = nombreCompleto.toCharArray();
+        int largo = arreglo.length;
+        System.out.println("Cantidad carácteres: " + largo);
+        for (int i = 0; i < largo; i++) {
+            System.out.print(arreglo[i]);
+        }
+
+        /* Método split(). Recibe como parámetro una expresión regular 'regex' y lo que hace es convertir
+        * el String en un arreglo, donde cada elemento del arreglo serán las palabras o carácteres que están
+        * separadas por la expresión regular */
+        System.out.println("\nnombreCompleto = " + nombreCompleto.split("o"));
+        String[] arreglo2 = nombreCompleto.split("o");
+        int l = arreglo2.length;
+        for (int i = 0; i < l; i++) {
+            System.out.println(arreglo2[i]);
+        }
+
+        // Carpeta 04 - Operadores, video 001
 
     }
 
