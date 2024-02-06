@@ -181,10 +181,10 @@ public class ClaseString {
         System.out.println("Contiene? " + nombreCompleto.contains("Adolfo"));
         /* Método startsWith(). Recibe una secuencia de carácteres, se usa para saber con cual carácter o cadena
          empieza la cadena y retorna true o false dependiendo el caso */
-        System.out.println("inicia? " + nombreCompleto.contains("G"));
+        System.out.println("inicia? " + nombreCompleto.startsWith("G"));
         /* Método endsWith(). Recibe una secuencia de carácteres, se usa para saber con cual carácter o cadena
          finaliza la cadena y retorna true o false dependiendo el caso */
-        System.out.println("Finaliza? " + nombreCompleto.contains("."));
+        System.out.println("Finaliza? " + nombreCompleto.endsWith("."));
         /* Método trim(). Elimina los espacios en blanco al principio y al final que pueda tener el String */
         String ejemplo = "   Ejemplo   ";
         System.out.println(ejemplo);
