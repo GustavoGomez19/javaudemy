@@ -110,7 +110,7 @@ public class Operadores {
 
         boolean b5 = texto1 instanceof String;
 
-        // Carpeta 04 - video 015
+        
 
     }
 }
