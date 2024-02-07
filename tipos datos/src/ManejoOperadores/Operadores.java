@@ -89,7 +89,28 @@ public class Operadores {
         }
         System.out.println("Usuario o clave no validos");
 
-        // Carpeta 04(Operadores) - Video 012
+        // Número máximo con operador ternario
+        int max = 0;
+        System.out.print("Ingrese el primer número: ");
+        int num1 = sc.nextInt();
+        System.out.print("Ingrese el segundo número: ");
+        int num2 = sc.nextInt();
+        System.out.print("Ingrese el tercer número: ");
+        int num3 = sc.nextInt();
+
+        max = (num1 > num2) ? num1 : num2;
+        max = (max > num3) ? max : num3;
+        System.out.println("Los números ingresados fueron: \n Número uno:" + num1 +
+                "\n Número dos: " + num2 + "\n Número tres: " + num3 +
+                "\n El número máximo es: " + max);
+
+        // Operador instanceOf
+        String texto1 = "Creando objeto de la clase String";
+        Integer numero = 17;
+
+        boolean b5 = texto1 instanceof String;
+
+        // Carpeta 04 - video 015
 
     }
 }
