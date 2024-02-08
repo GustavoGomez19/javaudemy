@@ -80,8 +80,27 @@ public class Bucles {
                 break;
         }
 
-        // Carpeta 05 - Flujos de control video 007
+        /* Sentencia while: primero se pregunta la condición y se cumple entra el bloque de código
+        * while(condición){
+        *   Bloque de código a ejecutar
+        * }*/
+
+
+        /*Sentencia do-while: primero ejecuta el bloque de código y luego valida la condición
+        * do{
+        *   Bloque de código a ejecutar
+        * }while(condición);*/
+
+
+        /*Sentencia for: Es muy comunmente utilizado para iterar un arreglo
+        * for(inicialización; condición; incremento/decremento){
+        *   bloque de código a ejecutar
+        * }*/
+        for (int i = 0; i <= 9; i++){
+            System.out.println("Hola:" + i);
+        }
 
     }
 
 }
+//Carpeta 05 - video 009
