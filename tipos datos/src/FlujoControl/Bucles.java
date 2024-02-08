@@ -16,19 +16,26 @@ public class Bucles {
         Scanner sc = new Scanner(System.in);
         String mes = "";
         int anio = 0;
-        System.out.print("Ingrese el mes: ");
-        mes = sc.next();
+        boolean bisiesto = false;
+
         System.out.print("Ingrese el año: ");
         anio = sc.nextInt();
+        if (anio % 400 == 0 || ((anio % 4 == 0) && !(anio % 100 == 0))) {
+            System.out.println("El año " + anio + " es bisiesto.");
+            bisiesto = true;
+        } else {
+            System.out.println("El año " + anio + " no es bisiesto");
+        }
 
+        System.out.print("Ingrese el mes: ");
+        mes = sc.next();
         if (mes.equals("enero")) {
             System.out.println("El mes de " + mes + " tiene 31 días");
-        } else if (mes.equals("febrero") && anio % 400 == 0 || ((anio % 4 == 0) && !(anio % 100 == 0))) {
-            System.out.println("El mes de " + mes + " es bisiesto y tiene tiene 29 días");
-        } else {
+        } else if (mes.equals("febrero") && bisiesto) {
+            System.out.println("El mes de " + mes + " tiene 29 días");
+        } else if (mes.equals("febrero")) {
             System.out.println("El mes de " + mes + " tiene 28 días");
-        }
-        if (mes.equals("Marzo")) {
+        } else if (mes.equals("Marzo")) {
             System.out.println("El mes de " + mes + " tiene 31 días");
         } else if (mes.equals("abril")) {
             System.out.println("El mes de " + mes + " tiene 30 días");
@@ -48,10 +55,13 @@ public class Bucles {
             System.out.println("El mes de " + mes + " tiene 30 días");
         } else if (mes.equals("diciembre")) {
             System.out.println("El mes de " + mes + " tiene 31 días");
+        } else{
+            System.out.println("El dato ingresado no corresponde a un mes válido!");
         }
 
         // Sentencia switch - case
-        int dias = 30;
+        System.out.print("Ingrese el número de días: ");
+        int dias = sc.nextInt();
         switch (dias) {
             case 30:
                 System.out.println("Los meses que tienen 30 días son: Abril, Junio, Septiembre, Noviembre");
@@ -65,13 +75,12 @@ public class Bucles {
             case 29:
                 System.out.println("Febrero tiene 29 días cuando es año bisiesto");
                 break;
-
             default:
-                System.out.println("Los mese no tienen menos de 28 días y tampoco mas de 31 días");
+                System.out.println("Los meses no tienen menos de 28 días y tampoco mas de 31 días");
                 break;
         }
 
-        // Carpeta 05 - Flujos de control video 004
+        // Carpeta 05 - Flujos de control video 007
 
     }
 
