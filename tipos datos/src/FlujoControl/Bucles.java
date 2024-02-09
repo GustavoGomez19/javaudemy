@@ -12,7 +12,7 @@ public class Bucles {
             System.out.println("Promedio muy bajo");
         }
 
-        // Ejemplo año bisiesto
+        /* Ejemplo año bisiesto
         Scanner sc = new Scanner(System.in);
         String mes = "";
         int anio = 0;
@@ -57,9 +57,9 @@ public class Bucles {
             System.out.println("El mes de " + mes + " tiene 31 días");
         } else{
             System.out.println("El dato ingresado no corresponde a un mes válido!");
-        }
+        }*/
 
-        // Sentencia switch - case
+        /* Sentencia switch - case
         System.out.print("Ingrese el número de días: ");
         int dias = sc.nextInt();
         switch (dias) {
@@ -78,7 +78,7 @@ public class Bucles {
             default:
                 System.out.println("Los meses no tienen menos de 28 días y tampoco mas de 31 días");
                 break;
-        }
+        }*/
 
         /* Sentencia while: primero se pregunta la condición y se cumple entra el bloque de código
         * while(condición){
@@ -95,12 +95,23 @@ public class Bucles {
         /*Sentencia for: Es muy comunmente utilizado para iterar un arreglo
         * for(inicialización; condición; incremento/decremento){
         *   bloque de código a ejecutar
-        * }*/
+        * }
         for (int i = 0; i <= 9; i++){
             System.out.println("Hola:" + i);
+        }*/
+
+        // Sentencia for con arreglos
+        Scanner input = new Scanner(System.in);
+        String[] nombres = new String[5];
+        for (int names = 0; names < nombres.length; names++){
+            System.out.print("Ingrese el nombre de la persona "+ (names+1) + ": ");
+            nombres[names] = input.nextLine();
+        }
+        System.out.println("**RESULTADOS**");
+        for (int names = 0; names < nombres.length; names++){
+            System.out.println("El nombre de la persona " + (names+1) + " es: " + nombres[names]);
         }
 
     }
 
 }
-//Carpeta 05 - video 009
