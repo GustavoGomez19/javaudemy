@@ -111,6 +111,7 @@ public class Bucles {
         for (int names = 0; names < nombres.length; names++){
             System.out.println("El nombre de la persona " + (names+1) + " es: " + nombres[names]);
         }
+//Carpeta 05 - video 009
 
     }
 
