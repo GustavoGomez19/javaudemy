@@ -3,14 +3,15 @@ package FlujoControl;
 import java.util.Scanner;
 
 public class Bucles {
-    // Estructura if-else
+    
     public static void main(String[] args) {
-        float promedio = 5.0f;
+        
+        /* Estructura if-elsefloat promedio = 5.0f;
         if (promedio > 4) {
             System.out.println("Felicidades");
         } else {
             System.out.println("Promedio muy bajo");
-        }
+        }*/ 
 
         /* Ejemplo año bisiesto
         Scanner sc = new Scanner(System.in);
@@ -100,7 +101,7 @@ public class Bucles {
             System.out.println("Hola:" + i);
         }*/
 
-        // Sentencia for con arreglos
+        /* Sentencia for con arreglos
         Scanner input = new Scanner(System.in);
         String[] nombres = new String[5];
         for (int names = 0; names < nombres.length; names++){
@@ -121,14 +122,52 @@ public class Bucles {
                 founded = true;
                 System.out.println("El nombre " + search + " se encuentra en la lista.");
                 break;
-            } else if(founded){
+            } else if(nombres[names].equalsIgnoreCase(search) == founded){
                 System.out.println("El nombre " + search + " no se encuentra en la lista.");
                 break;
             }
         }
-        input.close();
+        input.close();*/ 
         
-        //Carpeta 05 video 009
+        /*Bucle While: Primero valida la condición y si se cumple, ejecuta el bloque de código en su interior 
+        int count = 0;
+        while (count < 5) {
+            System.out.println(count);
+            count++;
+        }
+
+        Bucle do-While: Primero ejecuta el bloque de código en su interior y luego valida la condición.
+        count = 0;
+        do {
+            System.out.println(count);
+            count++;
+        }while (count < 5);*/
+
+        /* Sentencia for-each: Es simila al for, pero de una forma más fácil de leer y más declarativa
+         * Se utiliza para iterar sobre arreglos u objetos de colección de Java
+         
+        int[] numbers = {1, 3, 5, 7, 9};
+        for (int i : numbers) {
+            System.out.println(i);
+        }*/
+
+        //Ejercicio
+        Scanner sc = new Scanner(System.in);
+        String frase = "tres triste tigres tragan trigo en tres tristes trastes";
+        int max = frase.length();
+        int counter = 0;
+        System.out.print("Ingrese el caracter a contar: ");
+        char caracter = sc.next().charAt(0);
+        for (int i = 0; i < max; i++) {
+            if (frase.charAt(i) != caracter) {
+                continue;
+            }
+            counter++;
+        }
+        System.out.println("La letra " + caracter + " se encontró " + counter + " veces en la frase");
+        System.out.println(frase);
+        
+        
 
     }
 
