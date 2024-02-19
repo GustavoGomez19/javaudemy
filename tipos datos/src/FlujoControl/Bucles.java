@@ -111,7 +111,20 @@ public class Bucles {
         for (int names = 0; names < nombres.length; names++){
             System.out.println("El nombre de la persona " + (names+1) + " es: " + nombres[names]);
         }
-//Carpeta 05 - video 009
+
+        System.out.print("Ingrese el nombre a buscar: ");
+        String search = input.nextLine();
+        boolean founded = false;
+        for(int s = 0; s < nombres.length; s++){
+            if (search.equalsIgnoreCase(nombres[s])) {
+                founded = true;
+                System.out.println("El nombre " + search + " se encuentra en la lista.");
+                break;
+            } else if(founded) {
+                System.out.println("El nombre " + search + " no se encuentra en la lista.");
+            }
+        }
+        //Carpeta 05 video 009
 
     }
 
