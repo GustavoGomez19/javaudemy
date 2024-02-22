@@ -2,6 +2,8 @@ package EjerciciosBucles;
 
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class Ejercicios {
     public static void main(String[] args) {
         /*
@@ -250,14 +252,130 @@ public class Ejercicios {
          * con base el numero dado y exponentes entre uno y el exponente introducido.
          * No se deben utilizar funciones de exponenciación. Por ejemplo, si
          * introducimos el 2 y el 5, se deberán mostrar 2¹, 2², 2³, 2⁴ y 2⁵.
-         */
-        System.out.println("*** EXPONENTE DE UN NÚMERO DADO EN UN RANGO ***");
+         
+        System.out.println("*** EXPONENTE DE UN NÚMERO EN RANGO SEGÚN EL EXPONENTE INGRESADO ***");
         System.out.print("Ingrese el número base: ");
         int base = Integer.parseInt(System.console().readLine());
-        System.out.print("Ingrese el número exponenete: ");
-        int exponente = Integer.parseInt(System.console().readLine());
+        System.out.print("Ingrese el número exponente: ");
+        int exponenteRango = Integer.parseInt(System.console().readLine());
 
+        int potencia;
+        int exponente;
+
+        for (int i = 0; i < exponenteRango; i++) {
+            potencia = 1;
+            exponente = i;
+
+            for (int j = 0; j < exponente; j++) {
+                potencia *= base;
+            }
+
+            System.out.println(base + " elevado a la " + i + " = " + potencia);
+        }*/
+
+        /*Ejercicio 16: Escribe un programa que diga si un número introducido por teclado
+         * es o no primo. Un número primo es aquel que sólo es divisible entre
+         * él mismo y la unidad.
+         
+        System.out.println("*** PROGRAMA PARA SABER SI UN NÚMERO ES PRIMO ***");
+        System.out.print("Ingrese el número: ");
+        int number = Integer.parseInt(System.console().readLine());
+
+        boolean esPrimo = true;
+
+        for (int i = 2; i < number; i++) {
+            if ((number % i) == 0) {
+                esPrimo = false;
+            }
+        }
         
+        System.out.println("El número " + number + (esPrimo? "" : " no ") + "es primo.");*/
+
+        /* Ejercicio 17: Realiza un programa que sume los 100 números  siguientes a un número entero y positivo
+         * introducido por teclado. Se debe comprobar que el dato introducido es correcto (que es
+         * un número positivo).
+         
+        System.out.println("*** SUMA DE LOS 100 NÚMEROS DEPUÉS DE UN NÚMERO INGRESADO ***");
+
+        int number;
+        do{
+            System.out.print("Ingrese el número: ");
+            number = Integer.parseInt(System.console().readLine());
+            if (number < 0) {
+                System.out.println("El número ingresado no es un número positivo, valie e intente de nuevo");
+            }
+        }while(number < 0);
+        
+        
+        int suma = 0;
+        for (int i = number; i < number + 100; i++) {
+            suma += i;
+        }     
+        System.out.println("La suma de los 100 siguientes numero del número " + number + " es: " + suma);*/
+
+        /* Ejercicio 18: Escribe un programa que obtenga los números enteros comprendidos entre dos números
+         * introducidos por teclado y validados como distintos, el programa debe empezar por
+         * el menor de los enteros introducidos e ir incrementando de 7 en 7.
+         
+        System.out.println("*** OBTENER LOS NÚMEROS ENTEROS COMPRENDIDOS ENTRE 2 NÚMEROS ***");
+        int numUno;
+        int numDos;
+
+        //Validación de que los números ingresados no sean iguales y si los son, indicar al usuario
+        do{
+            System.out.print("Ingrese el primer número: ");
+            numUno = Integer.parseInt(System.console().readLine());
+            System.out.print("Ingrese el segundo número: ");
+            numDos = Integer.parseInt(System.console().readLine());
+            if (numUno == numDos) {
+                System.out.println("Los números ingresados no pueden ser iguales, valide e intente de nuevo.");
+            }
+        }while(numUno == numDos);
+
+        // Validar si el número dos es mayor que el número uno y si es así invertir el orden
+        if(numUno > numDos){
+            int aux;
+            aux = numDos;
+            numDos = numUno;
+            numUno = aux;
+        }
+        //Obtener los números enteros entre los 2 números ingresados
+        for (int i = numUno; i < numDos; i+=7) {
+            System.out.print(i + " ");
+        }
+        System.out.println();*/
+
+        /* Ejercicio 19: Realiza un programa que pinte una pirámide por pantalla. La altura
+         * se debe pedir por teclado. El carácter con el que se pinta la pirámide
+         * también se debe pedir por teclado.
+         */
+        System.out.println("*** CREAR UNA PIRAMIDE ***");
+        System.out.print("Ingrese la altura de la piramide: ");
+        int alturaPiramide = Integer.parseInt(System.console().readLine());
+
+        System.out.print("Ingrese el carácter con el cual desea armar la piramide: ");
+        String figura = System.console().readLine();
+
+        int planta = 1;
+        int longitudLinea = 1;  
+        int espacio = alturaPiramide-1;
+
+        while(planta <= alturaPiramide){
+            // Insertamos los espacios
+            for (int i = 1; i < espacio; i++) {
+                System.out.print(" ");
+            }
+
+            // Pintar la línea
+            for (int i = 1; i <= longitudLinea; i++) {
+                System.out.print(figura);
+            }
+            System.out.println();
+
+            planta++;
+            espacio--;
+            longitudLinea += 2;
+        }
 
 
     }
