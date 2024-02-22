@@ -155,7 +155,7 @@ public class Ejercicios {
         /* Ejercicio 11: Escribe un programa que muestre en tres columnas, el cuadrado y
          * el cubo de los 5 primeros números enteros a partir de uno que se
          * introduce por teclado.
-         */
+         
         System.out.print("Ingrese el número: ");
         int number = Integer.parseInt(System.console().readLine());
 
@@ -163,7 +163,102 @@ public class Ejercicios {
         System.out.println("===========================");
         for(int i = number; i < number+5; i++){
             System.out.printf("%5d |%8d |%9d\n", i, i * i, i * i * i);
+        }*/
+
+        /* Ejercicio 12: Escribe un programa que muestre los n primeros términos de la
+         * serie de Fibonacci. El primer término de la serie de Fibonacci
+         * es 0, el segundo es 1 y el resto se calcula sumando los dos
+         * anteriores, por lo que tendríamos que los términos son 0, 1, 1,
+         * 2, 3, 5, 8, 13, 21, 34, 55, 89, 144... El número n se debe
+         * introducir por teclado.
+         
+        System.out.println("*** SECEUNCIA FIBONACCI ***");
+        System.out.print("Ingrese el número para amar la secuenica Fibonacci: ");
+        int number = Integer.parseInt(System.console().readLine());
+        switch (number) {
+            case 1:
+                System.out.println("0");
+                break;
+
+            case 2:
+            System.out.print("0, 1");
+                break;
+        
+            default:
+                System.out.print("0 1");
+                int f1 = 0;
+                int f2 = 1;
+                int aux;
+                while (number > 2) {
+                    aux = f1;
+                    f1 = f2;
+                    f2 = aux + f2;
+                    System.out.print(" " + f2);
+                    number--;
+                }
         }
+        System.out.println();*/
+
+        /* Ejercicio 13: Escribe un programa que lea una lista de diez números y determine
+         * cuántos son positivos, y cuántos son negativos.
+         
+        System.out.println("*** LISTA DE 10 NÚMEROS, SABER CUANTOS (-) Y (+) HAY ***");
+        System.out.print("ingrese la lista de los 10 números: ");
+        int positivo = 0;
+        int negativo = 0;
+
+        for (int i = 0; i < 10; i++) {
+            if (Integer.parseInt(System.console().readLine()) > 0) {
+                positivo++;
+            } else {
+                negativo++;
+            }
+        }
+        System.out.println("Números positivos: " + positivo + "\n" + "Números negativos: " + negativo);
+        */
+
+        /* Ejercicio 14: Escribe un programa que pida una base y un exponente (entero positivo)
+         * y que calcule la potencia. 
+        System.out.println("*** CALCULAR LA POTENCIA DE UN NÚMERO ***");
+        System.out.print("Ingrese la base: ");
+        int base = Integer.parseInt(System.console().readLine());
+        System.out.print("Ingrese el exponente: ");
+        int exponente = Integer.parseInt(System.console().readLine());
+        int potencia = 1;
+
+        if(exponente == 0){
+            potencia = 1;
+        }
+
+        if(exponente > 0){
+            for (int i = 0; i < exponente; i++) {
+                potencia *= base;
+            }
+        }
+
+        if (exponente < 0) {
+            for (int i = 0; i < -potencia; i++) {
+                potencia *= base;
+            }
+            potencia = 1/potencia;
+        }
+
+        System.out.println("Base -> " + base + "\n" + "Exponente -> " + exponente + "\n" + "Potencia -> " + potencia);*/
+            
+        /* Ejercicio 15: Escribe un programa que dados dos números, uno real (base) y un
+         * entero positivo (exponente), saque por pantalla todas las potencias
+         * con base el numero dado y exponentes entre uno y el exponente introducido.
+         * No se deben utilizar funciones de exponenciación. Por ejemplo, si
+         * introducimos el 2 y el 5, se deberán mostrar 2¹, 2², 2³, 2⁴ y 2⁵.
+         */
+        System.out.println("*** EXPONENTE DE UN NÚMERO DADO EN UN RANGO ***");
+        System.out.print("Ingrese el número base: ");
+        int base = Integer.parseInt(System.console().readLine());
+        System.out.print("Ingrese el número exponenete: ");
+        int exponente = Integer.parseInt(System.console().readLine());
+
+        
+
 
     }
 }
